@@ -18,7 +18,7 @@ public class Shield extends Product{
 	protected int wigth;
 	
 	/**
-	 * initialization of  variables {@link Shield.name} {@link Shield.form} {@link Shield.cost}  {@link Shield.weight} {@link Shield.width} {@link Shield.height} {@link Shield.wigth}
+	 * initialization of  variables name, form, cost, weight, width, height, wigth
 	 * 
 	 * @param name name of the Shield
 	 * @param form form of the Shield

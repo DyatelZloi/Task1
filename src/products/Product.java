@@ -1,5 +1,6 @@
 package products;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -41,7 +42,7 @@ public abstract class Product {
     }
 	
     /**
-     * initialization of  variables {@link Product.name}, {@link Product.cost}
+     * initialization of  variables name, cost
      * 
      * @param name of product
      * @param cost of product
@@ -127,4 +128,29 @@ public abstract class Product {
 	public String toString() {
 		return "Product [name = " + this.name + ", cost = " + this.cost + ", weight = " + this.weight + "]";
 	}
+    
+    /**
+     * printing list of products
+     * @param productList list of Product needs to be printed
+     */
+    public static void print (List<Product> productList){
+    	for (Product product : productList) 
+            System.out.println(product.toString());
+    }
+    
+    /**
+     * 
+     * @param productList the List to be searched
+     * @param min set min cost
+     * @param max set max cost
+     */
+    public static void searchByCost(List<Product> productList, int min, int max){
+    	ArrayList <Product> outputList = new ArrayList <Product>();
+		for(Product product : productList)
+    		if (product.getCost() > min && product.getCost() < max)
+    			outputList.add(product);
+		for (Product product : outputList)
+			System.out.println(product.toString());
+			
+    }
 }

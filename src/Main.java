@@ -23,21 +23,21 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList <Product> equipment = new ArrayList <Product>();
-		equipment.add(new Armor("Нагрудник", 10, 20, 60));
-		equipment.add(new Weapon("Меч", "Колоще-режущее", 5, 5));
-		equipment.add(new Armor("Наплечник", 1, 1, 1));
-		equipment.add(new Weapon("Меч2", "Колоще-режущее", 10, 2));
-		equipment.add(new Shield("Щит", "Круглый", 2, 2, 2, 2, 2));
-		System.out.println("Без сортировки :");
-		Smith.print(equipment);
+		equipment.add(new Armor("Steel breastplate", 10, 20, 60));
+		equipment.add(new Weapon("Sword", "Colome-cutting", 5, 5));
+		equipment.add(new Armor("Shoulders", 1, 1, 1));
+		equipment.add(new Weapon("Sword2", "Colome-cutting", 10, 2));
+		equipment.add(new Shield("Shield", "Round", 2, 2, 2, 2, 2));
+		System.out.println("without sorting :");
+		Product.print(equipment);
 		equipment.sort(new SortByWeight());
-        System.out.println("C сортировкой :");
-        Smith.print(equipment);
+        System.out.println("with sorting :");
+        Product.print(equipment);
         Product.totalCost(equipment);
-        System.out.println("Поиск :");
-        Smith.searchByCost(equipment, 0, 10);
+        System.out.println("Search :");
+        Product.searchByCost(equipment, 0, 10);
         equipment.sort(new SortByName());
-        System.out.println("C сортировкой :");
-        Smith.print(equipment);
+        System.out.println("with sorting :");
+        Product.print(equipment);
 	}
 }

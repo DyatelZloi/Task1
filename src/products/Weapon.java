@@ -13,7 +13,7 @@ public class Weapon extends Product{
 	protected String damageType;
 	
 	/**
-	 * initialization of variables {@link Weapon.name} {@link Weapon.damageType} {@link Weapon.cost} {@link Weapon.weight}
+	 * initialization of variables name, damageType, cost, weight
 	 * 
 	 * @param name name of the Weapon
 	 * @param damageType damageType of the Weapon

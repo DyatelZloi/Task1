@@ -29,7 +29,7 @@ public class Armor extends Product{
 	}
 
 	/**
-	 * initialization of  variables 
+	 * initialization of  variables name, cost, weight, protection
 	 * 
 	 * @param name name of the armor
 	 * @param cost cost of the armor
