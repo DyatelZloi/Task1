@@ -4,6 +4,11 @@ import java.util.Comparator;
 
 import products.Product;
 
+/**
+ * Created by Nikifor_Malkov on 19-Oct-15.
+ * SortByWeight implements class Comparator
+ * @author Nikifor Malkov
+ */
 public class SortByName implements Comparator <Product>{
 
     @Override

@@ -7,6 +7,7 @@ import products.Shield;
 import products.Weapon;
 import sorting.SortByWeight;
 import sorting.SortByName;
+
 /**
  * Created by Nikifor_Malkov on 18-Oct-15.
  *

@@ -13,12 +13,12 @@ public class Weapon extends Product{
 	protected String damageType;
 	
 	/**
-	 * initialization of variables name, damageType, cost, weight
+	 * initialization of variables {@link Weapon.name} {@link Weapon.damageType} {@link Weapon.cost} {@link Weapon.weight}
 	 * 
-	 * @param name
-	 * @param damageType
-	 * @param cost
-	 * @param weight
+	 * @param name name of the Weapon
+	 * @param damageType damageType of the Weapon
+	 * @param cost cost of the Weapon
+	 * @param weight weight of the Weapon
 	 */
     public Weapon (String name, String damageType, int cost, int weight){
         this.name = name;
@@ -28,7 +28,7 @@ public class Weapon extends Product{
     }
 
 	/**
-	 * @return the damageType
+	 * @return the damageType of Weapon
 	 */
 	public String getDamageType() {
 		return damageType;

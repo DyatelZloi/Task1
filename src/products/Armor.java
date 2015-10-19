@@ -14,7 +14,7 @@ public class Armor extends Product{
 	
 	/**
 	 * 
-	 * @return the protection
+	 * @return the protection of armor
 	 */
     public int getProtection() {
 		return protection;
@@ -22,18 +22,18 @@ public class Armor extends Product{
 
     /**
      * 
-     * @param set the protection
+     * @param set the protection of armor
      */
 	public void setProtection(int protection) {
 		this.protection = protection;
 	}
 
 	/**
-	 * initialization of  variables {@link Armor.name} {@link Armor.cost} {@link Armor.weight} {@link Armor.protection}
+	 * initialization of  variables 
 	 * 
-	 * @param name name of armor
-	 * @param cost cost of armor
-	 * @param weight weight of armor
+	 * @param name name of the armor
+	 * @param cost cost of the armor
+	 * @param weight weight of the armor
 	 * @param protection protection of the armor
 	 */
 	public Armor (String name, int cost, int weight, int protection){

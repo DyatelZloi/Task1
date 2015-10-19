@@ -12,8 +12,8 @@ import products.Product;
     public class Smith {
     
     /**
-     * 
-     * @param productList 
+     * printing list of products
+     * @param productList list of Product needs to be printed
      */
     public static void print (List<Product> productList){
     	for (Product product : productList) 
@@ -22,7 +22,7 @@ import products.Product;
     
     /**
      * 
-     * @param productList set List
+     * @param productList the List to be searched
      * @param min set min cost
      * @param max set max cost
      */

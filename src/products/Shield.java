@@ -18,15 +18,15 @@ public class Shield extends Product{
 	protected int wigth;
 	
 	/**
-	 * Create Weapon
+	 * initialization of  variables {@link Shield.name} {@link Shield.form} {@link Shield.cost}  {@link Shield.weight} {@link Shield.width} {@link Shield.height} {@link Shield.wigth}
 	 * 
-	 * @param name
-	 * @param damageType
-	 * @param cost
-	 * @param weight
-	 * @param wigth 
+	 * @param name name of the Shield
+	 * @param form form of the Shield
+	 * @param cost cost of the Shield
+	 * @param weight weight of the Shield
+	 * @param wigth width of the Shield
 	 */
-    public Shield (String name, String form, int cost, int weight, int height, int width, int wigth){
+    public Shield (String name, String form, int cost, int weight, int width, int height, int wigth){
         this.name = name;
         this.form = form;
         this.cost = cost;

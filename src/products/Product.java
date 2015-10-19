@@ -43,8 +43,8 @@ public abstract class Product {
     /**
      * initialization of  variables {@link Product.name}, {@link Product.cost}
      * 
-     * @param name
-     * @param cost
+     * @param name of product
+     * @param cost of product
      */
     public Product (String name, int cost){
         this.name = name;
@@ -52,7 +52,7 @@ public abstract class Product {
     }
 
 	/**
-	 * @return the cost
+	 * @return the cost of product
 	 */
 	public int getCost() {
 		return cost;
@@ -66,7 +66,7 @@ public abstract class Product {
 	}
 
 	/**
-	 * @return the weight
+	 * @return the weight of product
 	 */
 	public int getWeight() {
 		return weight;
@@ -80,7 +80,7 @@ public abstract class Product {
 	}
 
 	/**
-	 * @return the name
+	 * @return the name of product
 	 */
 	public String getName() {
 		return name;
@@ -95,7 +95,7 @@ public abstract class Product {
 	
 	/**
      * 
-     * @return toralCost
+     * @return toralCost of products
      */
     public static int getTotalCost() {
 		return totalCost;
@@ -103,7 +103,7 @@ public abstract class Product {
 
     /**
      * 
-     * @return totalName
+     * @return totalName of products
      */
 	public static String getTotalName() {
 		return totalName;
@@ -112,7 +112,7 @@ public abstract class Product {
 	/**
      * Calculate the full cost
      * 
-     * @param productList
+     * @param productList that will be calculated
      */
     public static void totalCost(List<Product> productList){
     	for (Product product : productList)
@@ -121,10 +121,7 @@ public abstract class Product {
     }
     
     /**
-     * calculate the full name
-     * 
-     * @param productList
-     * @return totalName
+     * convert to a string
      */
     @Override
 	public String toString() {
