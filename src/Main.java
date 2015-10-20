@@ -1,10 +1,10 @@
 
-import java.util.ArrayList;
-import forge.Smith;
-import products.Armor;
+import java.util.Collections;
+import adding.AddArmor;
+import adding.AddShield;
+import adding.AddWeapon;
+import forge.Equipment;
 import products.Product;
-import products.Shield;
-import products.Weapon;
 import sorting.SortByWeight;
 import sorting.SortByName;
 
@@ -21,23 +21,33 @@ public class Main {
      * @param args input arguments array
      */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		ArrayList <Product> equipment = new ArrayList <Product>();
-		equipment.add(new Armor("Steel breastplate", 10, 20, 60));
-		equipment.add(new Weapon("Sword", "Colome-cutting", 5, 5));
-		equipment.add(new Armor("Shoulders", 1, 1, 1));
-		equipment.add(new Weapon("Sword2", "Colome-cutting", 10, 2));
-		equipment.add(new Shield("Shield", "Round", 2, 2, 2, 2, 2));
+		// TODO Auto-generated method stubs
+		Equipment equip = new Equipment();
+		equip.setStrategy(new AddWeapon());
+		equip.executeStrategy(equip.getEquipment(), "Sword1", "Colome-cutting", 5, 5, 0, 0, 0);
+		equip.setStrategy(new AddShield());
+		equip.executeStrategy(equip.getEquipment(), "Shield", "Round", 2, 2, 2, 2, 2);
+		equip.setStrategy(new AddWeapon());
+		equip.executeStrategy(equip.getEquipment(), "Sword2", "Colome-cutting", 5, 5, 0, 0, 0);
+		equip.setStrategy(new AddArmor());
+		equip.executeStrategy(equip.getEquipment(), "Steel breastplate", null, 10, 20, 60, 0, 0);
+		equip.setStrategy(new AddArmor());
+		equip.executeStrategy(equip.getEquipment(), "Shoulders", null, 1, 1, 1, 0, 0);
+		//equip.add(new Armor("Steel breastplate", 10, 20, 60));
+		//equip.add(new Weapon("Sword", "Colome-cutting", 5, 5));
+		//equip.add(new Armor("Shoulders", 1, 1, 1));
+		//equip.add(new Weapon("Sword2", "Colome-cutting", 10, 2));
+		//equip.add(new Shield("Shield", "Round", 2, 2, 2, 2, 2));
 		System.out.println("without sorting :");
-		Product.print(equipment);
-		equipment.sort(new SortByWeight());
+		Equipment.printEquipment(equip.getEquipment());
+		Collections.sort(equip.getEquipment(), new SortByWeight());
         System.out.println("with sorting :");
-        Product.print(equipment);
-        Product.totalCost(equipment);
+        Equipment.printEquipment(equip.getEquipment());
+        System.out.println("Total cost = " + Product.totalCost(equip.getEquipment()));
         System.out.println("Search :");
-        Product.searchByCost(equipment, 0, 10);
-        equipment.sort(new SortByName());
+        Product.searchByCost(equip.getEquipment(), 0, 10);
+        Collections.sort(equip.getEquipment(),new SortByName());
         System.out.println("with sorting :");
-        Product.print(equipment);
+        Equipment.printEquipment(equip.getEquipment());
 	}
 }

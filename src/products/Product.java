@@ -13,12 +13,12 @@ public abstract class Product {
 	/**
 	 * Total cost of the product
 	 */
-    protected static int totalCost;
+    private static int totalCost;
     
 	/**
      * Total names of the product
      */
-    protected static String totalName;
+    private static String totalName;
     
 	/**
 	 * Cost of product
@@ -115,10 +115,10 @@ public abstract class Product {
      * 
      * @param productList that will be calculated
      */
-    public static void totalCost(List<Product> productList){
+    public static int totalCost(List<Product> productList){
     	for (Product product : productList)
             totalCost += product.getCost();
-    	System.out.println("Общая стоимость = " + getTotalCost());
+    	return getTotalCost();
     }
     
     /**
@@ -130,27 +130,16 @@ public abstract class Product {
 	}
     
     /**
-     * printing list of products
-     * @param productList list of Product needs to be printed
-     */
-    public static void print (List<Product> productList){
-    	for (Product product : productList) 
-            System.out.println(product.toString());
-    }
-    
-    /**
      * 
      * @param productList the List to be searched
-     * @param min set min cost
-     * @param max set max cost
+     * @param minCost set min cost
+     * @param maxCost set max cost
      */
-    public static void searchByCost(List<Product> productList, int min, int max){
+    public static List<Product> searchByCost(List<Product> productList, int minCost, int maxCost){
     	ArrayList <Product> outputList = new ArrayList <Product>();
 		for(Product product : productList)
-    		if (product.getCost() > min && product.getCost() < max)
+    		if (product.getCost() > minCost && product.getCost() < maxCost)
     			outputList.add(product);
-		for (Product product : outputList)
-			System.out.println(product.toString());
-			
+		return outputList;	
     }
 }
