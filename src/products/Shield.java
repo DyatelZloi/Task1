@@ -5,17 +5,17 @@ public class Shield extends Product{
 	/**
 	 * form of the Shield
 	 */
-	protected String form;
+	private String form;
 	
 	/**
 	 * Height of the Shield
 	 */
-	protected int height;
+	private int height;
 	
 	/**
 	 * Wigth of the Shield
 	 */
-	protected int wigth;
+	private int wigth;
 	
 	/**
 	 * initialization of  variables name, form, cost, weight, width, height, wigth
@@ -31,8 +31,8 @@ public class Shield extends Product{
         this.form = form;
         this.cost = cost;
         this.weight = weight;
-        this.height = height;
-        this.wigth = wigth;
+        this.setHeight(height);
+        this.setWigth(wigth);
     }
 
 	/**
@@ -47,5 +47,33 @@ public class Shield extends Product{
 	 */
 	public void setForm(String form) {
 		this.form = form;
+	}
+
+	/**
+	 * @return the height
+	 */
+	public int getHeight() {
+		return height;
+	}
+
+	/**
+	 * @param height the height to set
+	 */
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	/**
+	 * @return the wigth
+	 */
+	public int getWigth() {
+		return wigth;
+	}
+
+	/**
+	 * @param wigth the wigth to set
+	 */
+	public void setWigth(int wigth) {
+		this.wigth = wigth;
 	}
 }

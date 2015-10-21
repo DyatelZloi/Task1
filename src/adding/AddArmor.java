@@ -4,7 +4,11 @@ import java.util.List;
 import products.Armor;
 import products.Product;
 
-
+/**
+ * Created by Nikifor_Malkov on 20-Oct-15.
+ *
+ * @author Nikifor Malkov
+ */
 public class AddArmor implements Adding {
 
 	@Override

@@ -4,7 +4,11 @@ import java.util.List;
 import products.Product;
 import products.Shield;
 
-
+/**
+ * Created by Nikifor_Malkov on 20-Oct-15.
+ *
+ * @author Nikifor Malkov
+ */
 public class AddShield implements Adding {
 
 	@Override

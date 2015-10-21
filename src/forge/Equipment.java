@@ -6,16 +6,19 @@ import java.util.List;
 import adding.Adding;
 import products.Product;
 
-
+/**
+ * Created by Nikifor_Malkov on 20-Oct-15.
+ *
+ * @author Nikifor Malkov
+ */
 public class Equipment {
 	
-	private ArrayList <Product> equipment = new ArrayList <Product>();
+	private ArrayList <Product> equipment;
 	private Adding adding;
 	
-	public void add(List <Product> equipment, Product product1){
-		equipment.add(product1);
+	public Equipment (List <Product> equipment){
+		this.equipment = (ArrayList<Product>) equipment;
 	}
-	
 	/**
      * printing list of products
      * @param productList list of Product needs to be printed
@@ -39,9 +42,11 @@ public class Equipment {
 		this.equipment = equipment;
 	}
 
+	
 	public void setStrategy(Adding adding) {
         this.adding = adding;
     }
+	
 	
 	public void executeStrategy(List <Product> equipment, String name, String form, int cost, int weight, int width, int height, int wigth) {
         adding.execute(equipment, name, form, cost, weight, width, height, wigth);

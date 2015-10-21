@@ -1,5 +1,7 @@
 
+import java.util.ArrayList;
 import java.util.Collections;
+
 import adding.AddArmor;
 import adding.AddShield;
 import adding.AddWeapon;
@@ -21,8 +23,7 @@ public class Main {
      * @param args input arguments array
      */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stubs
-		Equipment equip = new Equipment();
+		Equipment equip = new Equipment(new ArrayList <Product>());
 		equip.setStrategy(new AddWeapon());
 		equip.executeStrategy(equip.getEquipment(), "Sword1", "Colome-cutting", 5, 5, 0, 0, 0);
 		equip.setStrategy(new AddShield());
@@ -33,11 +34,6 @@ public class Main {
 		equip.executeStrategy(equip.getEquipment(), "Steel breastplate", null, 10, 20, 60, 0, 0);
 		equip.setStrategy(new AddArmor());
 		equip.executeStrategy(equip.getEquipment(), "Shoulders", null, 1, 1, 1, 0, 0);
-		//equip.add(new Armor("Steel breastplate", 10, 20, 60));
-		//equip.add(new Weapon("Sword", "Colome-cutting", 5, 5));
-		//equip.add(new Armor("Shoulders", 1, 1, 1));
-		//equip.add(new Weapon("Sword2", "Colome-cutting", 10, 2));
-		//equip.add(new Shield("Shield", "Round", 2, 2, 2, 2, 2));
 		System.out.println("without sorting :");
 		Equipment.printEquipment(equip.getEquipment());
 		Collections.sort(equip.getEquipment(), new SortByWeight());

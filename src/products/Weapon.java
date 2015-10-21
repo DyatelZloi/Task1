@@ -10,7 +10,7 @@ public class Weapon extends Product{
 	/**
 	 * Sets the damage type
 	 */
-	protected String damageType;
+	private String damageType;
 	
 	/**
 	 * initialization of variables name, damageType, cost, weight

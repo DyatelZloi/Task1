@@ -4,6 +4,11 @@ import java.util.List;
 
 import products.Product;
 
+/**
+ * Created by Nikifor_Malkov on 20-Oct-15.
+ *
+ * @author Nikifor Malkov
+ */
 public interface Adding {
 	
 	public void execute(List<Product> equipment, String name, String form, int cost,

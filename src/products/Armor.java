@@ -10,7 +10,7 @@ public class Armor extends Product{
 	/**
 	 * Determines the protection of the armor
 	 */
-	protected int protection;
+	private int protection;
 	
 	/**
 	 * 

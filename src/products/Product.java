@@ -8,7 +8,7 @@ import java.util.List;
  *
  * @author Nikifor Malkov
  */
-public abstract class Product {
+public class Product {
 	
 	/**
 	 * Total cost of the product
